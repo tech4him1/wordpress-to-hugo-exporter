@@ -231,7 +231,7 @@ class Hugo_Export
             // Hugo doesn't like word-wrapped permalinks
             $output = Spyc::YAMLDump($meta, false, 0);
 
-            $output .= "\n---\n";
+            $output .= "---\n";
             $output .= $this->convert_content($post);
             $this->write($output, $post);
         }
