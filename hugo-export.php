@@ -117,6 +117,8 @@ class Hugo_Export
             'author' => get_userdata($post->post_author)->display_name,
             'type' => get_post_type($post),
             'date'   => $this->_getPostDateAsIso($post),
+            //convert featured image path into relative path.
+            'banner' => urldecode(str_replace(home_url('/'), '', get_the_post_thumbnail_url($post))),
         );
         if (false === empty($post->post_excerpt)) {
             $output['excerpt'] = $post->post_excerpt;
