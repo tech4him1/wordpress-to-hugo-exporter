@@ -119,7 +119,7 @@ class Hugo_Export
             'date'   => $this->_getPostDateAsIso($post),
         );
         if (false === empty($post->post_excerpt)) {
-            $output['excerpt'] = $post->post_excerpt;
+            $output['description'] = $post->post_excerpt;
         }
 
         //turns permalink into 'url' format, since Hugo supports redirection on per-post basis
